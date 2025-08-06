@@ -6,15 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="slf4j-api" />
         <module name="logback-core" />
+        <module name="slf4j-api.module-compile" />
         <module name="logback-classic" />
       </profile>
+      <profile name="Annotation profile for SLF4J API Module" enabled="true">
+        <sourceOutputDir name="../generated-sources/annotations" />
+        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
+        <module name="slf4j-api.test" />
+        <module name="slf4j-api.main" />
+      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="logback-classic" target="11" />
-      <module name="logback-core" target="11" />
-      <module name="slf4j-api" target="9" />
-    </bytecodeTargetLevel>
   </component>
 </project>
